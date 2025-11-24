@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FLAMES</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      font-family: 'Fredoka', sans-serif;
+    }
+
+    body {
+      background-color: rgba(251, 221, 255, 0.336);
+      text-align: center;
+    }
+
+    .p1 {
+      background-image: linear-gradient(to right, rgb(228, 228, 228), #3e064d, rgb(255, 255, 255));
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: transparent;
+      font-family: sans-serif;
+      display: inline-block;
+    }
+
+    .p1 {
+      margin-top: 6%;
+    }
+
+    h2 {
+      text-align: center;
+    }
+
+    .container {
+      margin: auto;
+      width: 35%;
+      padding: 5%;
+      background-color: #c0a0df49;
+      border-radius: 20px;
+    }
+
+    .names {
+      display: flex;
+      flex-direction: column;
+      /* width: 80%; */
+      margin: auto;
+      row-gap: 10px;
+    }
+
+    input {
+      color: rgb(53, 53, 53);
+      height: 25px;
+      border-radius: 5px;
+      border-style: none;
+      padding: 1%;
+      font-size: large;
+    }
+
+    input:focus,
+    .btn1:focus,
+    .btn2:focus {
+      box-shadow: 0px 0px 15px #3e064d;
+      outline: none;
+    }
+
+    .flames {
+      display: flex;
+      margin: auto;
+      justify-content: space-evenly;
+      font-size: xx-large;
+      margin-top: 5%;
+    }
+
+    .flm {
+      width: 10%;
+      background-color: #eca0e883;
+      text-align: center;
+      border-radius: 10px;
+      position: relative;
+    }
+
+    .flm span {
+      color: rgb(255, 0, 0);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 30px;
+      font-weight: bold;
+      display: none;
+      pointer-events: none;
+    }
+
+    .buttons {
+      display: flex;
+      margin: auto;
+      justify-content: space-around;
+      margin-top: 5%;
+    }
+
+    .btn1 {
+      background-color: #000;
+      color: white;
+      border-radius: 5px;
+      border: none;
+      width: 100px;
+      height: 30px;
+    }
+
+    .btn1:hover {
+      background-color: #eca0e883;
+      color: #000;
+      cursor: pointer;
+      box-shadow: 0px 0px 10px #3e064d;
+    }
+
+    .flm span.correct {
+      display: none;
+    }
+
+
+    /* Media Queery */
+
+    @media(max-width:767px) {
+
+      /* .buttons {
+        flex-direction: column;
+        align-items: center;
+        row-gap: 5px;
+      } */
+      .container {
+        width: 50%;
+      }
+
+      .flm {
+        width: 15%;
+      }
+    }
+
+    @media(max-width:425px) {
+      .container {
+        width: 65%;
+      }
+    }
+
+    @media(max-width:425px) {
+      .container {
+        width: 85%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1 class="p1">FLAMES</h1>
+  <div class="container">
+    <div class="names">
+      <input type="text" placeholder="Enter the Name" id="firstname">
+      <input type="text" placeholder="Enter the Name" id="lastname">
+    </div>
+    <div class="buttons">
+      <button class="btn1" onclick="calculate()" type="button">Calculate</button>
+      <a href=""><button class="btn1">Refresh</button></a>
+
+    </div>
+    <div class="flames">
+      <div class="flm" id="1">F <span>X</span></div>
+      <div class="flm" id="2">L <span>X</span></div>
+      <div class="flm" id="3">A <span>X</span></div>
+      <div class="flm" id="4">M <span>X</span></div>
+      <div class="flm" id="5">E <span>X</span></div>
+      <div class="flm" id="6">S <span>X</span></div>
+    </div>
+    <h2 id="Answer"></h2>
+    <script src="script.js"></script>
+</body>
+
+</html>
